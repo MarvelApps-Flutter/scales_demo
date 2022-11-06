@@ -297,7 +297,7 @@ class TimeRangePickerState extends State<TimeRangePicker>
 
   late TimeOfDay _startTime;
   late TimeOfDay _endTime;
-  double _radius = 50;
+  double _radius = 40;
   double _offsetRad = 0;
 
   @override
@@ -621,6 +621,7 @@ class TimeRangePickerState extends State<TimeRangePicker>
               children: <Widget>[
                 SizedBox(height: MediaQuery.of(context).viewPadding.top,),
                 if (!widget.hideTimes) buildHeader(false),
+                SizedBox(height: 10,),
                 Stack(
                     //fit: StackFit.loose,
                     alignment: Alignment.center,
@@ -630,6 +631,7 @@ class TimeRangePickerState extends State<TimeRangePicker>
                       buildTimeRange(
                           localizations: localizations, themeData: themeData)
                     ]),
+                    SizedBox(height: 10,), 
                 if (!widget.hideButtons)
                   buildButtonBar(localizations: localizations)
               ],
@@ -694,7 +696,7 @@ class TimeRangePickerState extends State<TimeRangePicker>
           ),
         },
         child: AspectRatio(
-          aspectRatio: 1,
+          aspectRatio: 1.4,
           child: Container(
             color: Colors.white.withOpacity(0),
             child: Center(
@@ -782,12 +784,12 @@ class TimeRangePickerState extends State<TimeRangePicker>
                     ? widget.activeTimeTextStyle ??
                         TextStyle(
                             color: activeColor,
-                            fontSize: 28,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold)
                     : widget.timeTextStyle ??
                         TextStyle(
                             color: inactiveColor,
-                            fontSize: 28,
+                            fontSize: 18,
                             fontWeight: FontWeight.bold),
               ),
             ],
@@ -801,12 +803,12 @@ class TimeRangePickerState extends State<TimeRangePicker>
                   ? widget.activeTimeTextStyle ??
                       TextStyle(
                           color: activeColor,
-                          fontSize: 28,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold)
                   : widget.timeTextStyle ??
                       TextStyle(
                           color: inactiveColor,
-                          fontSize: 28,
+                          fontSize: 18,
                           fontWeight: FontWeight.bold),
             ),
           ])

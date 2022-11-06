@@ -149,7 +149,7 @@ class _SleepHoursScreenState extends State<SleepHoursScreen> {
             CustomPaint(
                 painter: const WavePainter(),
                 child: SizedBox(
-                  height: 230,
+                  height: 210,
                   child: Column(
                     children: [
                       InkWell(
@@ -161,7 +161,7 @@ class _SleepHoursScreenState extends State<SleepHoursScreen> {
                         },
                         child: Container(
                           alignment: Alignment.center,
-                          height: 100,
+                          height: 70,
                           decoration: const BoxDecoration(
                             color: Colors.white,
                             shape: BoxShape.circle,
@@ -191,6 +191,7 @@ class _SleepHoursScreenState extends State<SleepHoursScreen> {
                             totalTime != null
                                 ? SizedBox(
                                     width: MediaQuery.of(context).size.width,
+                                    
                                     child: FractionallySizedBox(
                                       widthFactor: 0.9,
                                       child: Container(
